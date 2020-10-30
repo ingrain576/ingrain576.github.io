@@ -1,0 +1,30 @@
+/* . select class */
+.primary-heading {
+    color: green;
+}
+
+/* # select id's */
+#welcome, #about {
+    background-color: rgb(230, 217, 109);
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+/* element/tag selector */
+body {
+    background-color: rgb(231, 255, 191);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#welcome p span {
+    font-weight: bold;
+}
+
+h2 {
+    color: rgb(99, 18, 79);
+}
+
+h1 {
+    color: #ffb23d;
+}
