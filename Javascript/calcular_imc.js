@@ -5,7 +5,7 @@ let alturaForm = document.querySelector('#altura')
 let output = document.querySelector('#resultado')
 
 function calcularImc(peso, altura) {
-    let imc = peso / (altura * altura);
+    let imc = (peso / (altura * altura)).toFixed(2);
 
     if (imc <= 16.9) {
         return "IMC:"+ imc + " Muito abaixo do peso";
