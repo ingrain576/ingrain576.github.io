@@ -1,9 +1,10 @@
 function mostrarTabuada() {
     let num = document.getElementById("num").value;
-    const resultado = document.getElementById("resultado");
+    var msg = "";
     for (let index = 0; index <= 100; index++) {
-        resultado.innerHTML += `${Number(num)} x ${index} = ${num * index} <br>`;
+        msg += `${Number(num)} x ${index} = ${num * index} <br>`;
     }
+    document.getElementById("resultado").innerHTML = msg;
 }
 
 function limparTabuada() {
