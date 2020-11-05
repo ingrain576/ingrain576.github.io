@@ -9,7 +9,7 @@ let numChances = 5,
 tentarBtn.addEventListener('click', function(e){
     if (isNaN(numUsuario.value) || numUsuario.value > 10 || numUsuario.value < 1) {        
         alert('Número inválido.')
-        window.location.reload() 
+        numUsuario.value = ''
     }
     if(parseInt(numUsuario.value) === numSorteado) {
         alert('Você acertou o número, jogar novamente?')
