@@ -1,0 +1,40 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+<div id="contador">
+    <h1>{{ contador }}</h1>
+    <!-- Se for preciso passar um evento e um valor na função simultaneamente -->
+    <button v-on:click="somar(5, $event)">somar 1</button>
+    <h1 v-on:mousemove="atualizaXY">
+        Mouse pos X: {{ x }} pos Y: {{ y }}
+        <!-- Parar evento herdado da tag h1 -->
+        <span v-on:mousemove.stop="">PARAR EVENTO MOUSE!</span>
+    </h1>
+    <!-- Previnir comportamento padrão -->
+    <a v-on:click.prevent="" href="http://google.com">Google</a>
+    <hr>
+    <!-- Pegar input tecla pressionada -->
+    <input v-on:keyup.enter="teclaPressionada" type="text">
+</div>
+
+<script>
+  new Vue({
+      el: '#contador',
+      data: {
+          contador: 0,
+          x: 0,
+          y: 0
+      },
+      methods: {
+          somar(passo, evento) {
+              this.contador += passo
+          },
+          atualizaXY(event) {
+              this.x = event.clientX
+              this.y = event.clientY
+          },
+          teclaPressionada() {
+              alert('Você pressionou a tecla Enter')
+          }
+      }
+  })
+</script>
