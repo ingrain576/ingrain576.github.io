@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+}
+.text-style {
+    font-family: monospace;
+    color: rgb(255, 255, 255);
+}
+
+h1 {    
+    text-align: center;
+}
+
+h3 {
+    padding-left: 80px;
+}
+
+#msg {
+    padding-left: 450px;
+}
+
+.grid {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 1200px;
+}
